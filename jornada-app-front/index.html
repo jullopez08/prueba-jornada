@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Laboral</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <h2>Control de ingreso</h2>
+
+     <form onsubmit="iniciar(); return false;">
+
+  <input
+    id="codigo"
+    placeholder="Codigo de empleado"
+    required
+  />
+
+  <br><br>
+
+  <button type="submit">
+    Iniciar jornada
+  </button>
+
+</form>
+
+<button onclick="terminar()">
+  Terminar jornada
+</button>
+
+     <h3 id="cronometro">00:00:00</h3>
+
+     <h3>Registros</h3>
+
+<table border="1" id="tabla"  >
+  <thead>
+    <tr>
+      <th>Codigo</th>
+      <th>Entrada</th>
+      <th>Salida</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+
+  <tbody id="tablaBody">
+  </tbody>
+
+</table>
+
+
+     <script src="app.js"></script>
+</body>
+</html>
