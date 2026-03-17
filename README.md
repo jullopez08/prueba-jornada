@@ -27,37 +27,98 @@
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Project setup
+# Prueba técnica – Control de jornada laboral
 
-```bash
-$ npm install
-```
+Aplicación desarrollada con **NestJS, Sequelize, PostgreSQL y Docker**, que permite iniciar y terminar una jornada laboral, registrando en base de datos:
 
-## Compile and run the project
+- Código de empleado
+- Hora de entrada
+- Hora de salida
+- Tiempo total trabajado
 
-```bash
-# development
-$ npm run start
+También incluye un frontend simple en HTML + JavaScript con cronómetro en tiempo real.
 
-# watch mode
-$ npm run start:dev
+---
 
-# production mode
-$ npm run start:prod
-```
+## 🚀 Tecnologías usadas
 
-## Run tests
+- Node.js
+- NestJS
+- Sequelize
+- PostgreSQL
+- Docker
+- HTML / JavaScript / CSS
 
-```bash
-# unit tests
-$ npm run test
+---
 
-# e2e tests
-$ npm run test:e2e
+## ⚙️ Requisitos
 
-# test coverage
-$ npm run test:cov
-```
+- Node 18+
+- Docker
+- Docker Compose
 
+---
+
+## ▶️ Pasos para ejecutar el proyecto
+
+### 1. Clonar repositorio
+git clone <URL_DEL_REPO>
+cd jornada-app
+### 2. Crear archivo `.env`
+
+Crear un archivo `.env` en la raíz con:
+DB_NAME=jornada
+DB_USER=postgres
+DB_PASSWORD=1234
+DB_HOST=localhost
+DB_PORT=5432
+### 3. Levantar base de datos con Docker
+docker compose up -d
+
+### 4. Instalar dependencias
+npm install
+
+### 5. Ejecutar backend
+npm run start:dev
+Servidor:
+
+
+http://localhost:3000
+
+
+### 6. Abrir frontend
+
+Abrir el archivo:
+
+
+frontend/index.html
+
+en el navegador.
+
+---
+
+## ✅ Funcionalidad
+
+- Iniciar jornada con código de empleado
+- Cronómetro en tiempo real
+- Terminar jornada
+- Guardar datos en PostgreSQL
+- Mostrar registros en tabla
+- Manejo de errores en backend
+
+---
+
+## ⚠️ Manejo de errores implementado
+
+- Código vacío
+- Jornada inexistente al terminar
+- ID inválido
+
+---
+
+## Autor
+
+Julieth perdomo lopez
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
